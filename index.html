@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zahra Almadeh | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="btn btn-ghost" id="themeToggle" type="button" aria-label="Toggle dark mode">
+      🌙/☀️
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ABOUT -->
+  <section id="about" class="section hero">
+    <div class="container">
+      <div class="hero-header">
+        <img class="profile-img" src="assets/images/me.png" alt="Profile photo" />
+        <h1 class="title">Zahra Almadeh</h1>
+      </div>
+
+      <p class="hero-badges">
+        <span class="badge">Junior Student at KFUPM</span>
+        <span class="badge">Web Development</span>
+        <span class="badge">Software Design</span>
+      </p>
+
+      <p class="muted about-text">
+        Software Engineering student at KFUPM, aspiring to build useful applications and websites that serve users and make work easier.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">Here are two projects I worked on, with more coming soon.</p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="web" type="button">Web</button>
+        <button class="filter-btn" data-filter="finance" type="button">Finance</button>
+      </div>
+
+      <p id="emptyMessage" class="muted empty-message">No projects found.</p>
+
+      <div class="projects-grid">
+        <article class="card project-card" data-category="web">
+          <img class="project-img" src="assets/images/TODO.png" alt="Smart Task Manager Web App" />
+          <div class="project-body">
+            <h3>Smart Task Manager Web App</h3>
+            <p class="muted">
+              A responsive web app to create, edit, and organize daily tasks. It includes categories, due dates, dark mode, and local storage support. Built with HTML, CSS, and JavaScript.
+            </p>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card" data-category="finance">
+          <img class="project-img" src="assets/images/FTAPP.png" alt="Personal Finance Tracker" />
+          <div class="project-body">
+            <h3>Personal Finance Tracker</h3>
+            <p class="muted">
+              A web-based finance tracker to monitor income and expenses. It displays balance summaries and charts to visualize spending. Developed using HTML, CSS, and JavaScript.
+            </p>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Send a message or feedback.</p>
+      </div>
+
+      <form class="card form" id="contactForm">
+        <div class="form-row">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+        </div>
+
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Send</button>
+          <p class="muted" id="formStatus" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="muted footer-name">
+      © <span id="year"></span> Zahra Almadeh
+      <span class="dot">•</span>
+      <a class="link" href="mailto:almadehzahra05@gmail.com">almadehzahra05@gmail.com</a>
+      <span class="dot">•</span>
+      <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+
+    <a class="link" href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
